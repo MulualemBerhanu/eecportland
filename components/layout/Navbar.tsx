@@ -35,6 +35,12 @@ export function Navbar() {
     };
   }, [open]);
 
+  // Safety: ensure the page is always scrollable after navigation.
+  useEffect(() => {
+    setOpen(false);
+    document.body.style.overflow = "";
+  }, [pathname]);
+
   const isHome = pathname === "/";
   const transparent = isHome && !scrolled && !open;
 

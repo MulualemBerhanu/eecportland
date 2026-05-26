@@ -13,6 +13,6 @@ export function scrollToPageTop(reduceMotion?: boolean | null) {
   window.scrollTo({
     top: 0,
     left: 0,
-    behavior: reduceMotion ? "auto" : "smooth",
+    behavior: "auto",
   });
 }

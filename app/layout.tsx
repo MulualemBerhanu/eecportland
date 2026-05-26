@@ -61,7 +61,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`h-full scroll-smooth ${outfit.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`h-full ${outfit.variable}`} suppressHydrationWarning>
       <body
         suppressHydrationWarning
         className={`${dmSans.variable} ${fraunces.variable} ${notoEthiopic.variable} flex min-h-full flex-col font-sans text-charcoal-800 antialiased`}

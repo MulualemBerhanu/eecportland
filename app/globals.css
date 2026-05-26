@@ -60,7 +60,7 @@
 
 @layer base {
   html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
     color-scheme: only light;
     scroll-padding-top: 136px;
   }
@@ -99,6 +99,13 @@
    */
   :where(h1.font-heading, h2.font-heading, h3.font-heading) {
     line-height: 1.28;
+  }
+}
+
+/* iOS/mobile performance: fixed backgrounds can cause scroll jank. */
+@media (max-width: 767px) {
+  body {
+    background-attachment: scroll;
   }
 }
 
