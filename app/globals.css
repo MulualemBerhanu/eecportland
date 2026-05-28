@@ -670,3 +670,103 @@
     opacity: 0.7;
   }
 }
+
+/* Hero — English name lockup (editorial, compact) */
+.hero-english-lockup {
+  position: relative;
+  max-width: 22rem;
+  padding: 1rem 1.125rem 1.05rem 1.25rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: linear-gradient(
+    135deg,
+    rgba(11, 28, 44, 0.52) 0%,
+    rgba(11, 28, 44, 0.28) 55%,
+    rgba(11, 28, 44, 0.38) 100%
+  );
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.12) inset,
+    0 18px 44px -28px rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.hero-english-lockup::before,
+.hero-english-lockup::after {
+  content: "";
+  position: absolute;
+  width: 1.125rem;
+  height: 1.125rem;
+  pointer-events: none;
+  opacity: 0.75;
+}
+
+.hero-english-lockup::before {
+  top: 0.65rem;
+  left: 0.65rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.65);
+  border-left: 1px solid rgba(212, 175, 55, 0.65);
+}
+
+.hero-english-lockup::after {
+  right: 0.65rem;
+  bottom: 0.65rem;
+  border-right: 1px solid rgba(212, 175, 55, 0.45);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.45);
+}
+
+.hero-english-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-bottom: 0.65rem;
+  font-family: var(--font-sans);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(241, 210, 122, 0.88);
+}
+
+.hero-english-eyebrow::before,
+.hero-english-eyebrow::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  max-width: 2rem;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.55));
+}
+
+.hero-english-eyebrow::after {
+  background: linear-gradient(270deg, transparent, rgba(212, 175, 55, 0.55));
+}
+
+.hero-english-title {
+  margin: 0;
+  font-family: var(--font-heading), ui-serif, Georgia, serif;
+  font-size: clamp(1.05rem, 2.4vw + 0.35rem, 1.5rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "ss01" 1;
+  color: #faf8f5;
+  text-shadow: 0 1px 14px rgba(0, 0, 0, 0.35);
+}
+
+.hero-english-title em {
+  font-style: italic;
+  font-weight: 500;
+  color: rgba(241, 210, 122, 0.95);
+}
+
+.hero-english-city {
+  margin: 0.55rem 0 0;
+  padding-top: 0.55rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: rgba(212, 175, 55, 0.92);
+}
