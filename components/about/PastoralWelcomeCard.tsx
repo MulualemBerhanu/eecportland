@@ -6,7 +6,7 @@ import { CTALink } from "@/components/shared/CTAButton";
 import { cn } from "@/lib/utils";
 
 const PASTOR_PORTRAIT = "/paster.jpeg";
-const PASTOR_NAME = "Pastor Demisse Tadess";
+const PASTOR_NAME = "Pastor Demess Tadesse";
 const PASTOR_ROLE = "Senior Pastor";
 
 const ease = [0.22, 1, 0.36, 1] as const;

@@ -39,7 +39,7 @@ export type LeadershipMember = {
 /** Board roster. Portraits hidden until `showLeadershipPhotos` is enabled. */
 export const leadership: LeadershipMember[] = [
   {
-    name: "Pastor Demisse Tadess",
+    name: "Pastor Demess Tadesse",
     role: "Board Director",
     bio: "Serves on the church board with pastoral care and steady leadership for our congregation.",
     image:
