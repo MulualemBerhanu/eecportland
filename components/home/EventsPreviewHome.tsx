@@ -3,6 +3,7 @@ import { CTALink } from "@/components/shared/CTAButton";
 import { Container } from "@/components/shared/Container";
 import { FlyerImage } from "@/components/shared/FlyerImage";
 import { SectionHeading } from "@/components/shared/SectionHeading";
+import { siteConfig } from "@/lib/site";
 import { CalendarDays, Clock3, MapPin } from "lucide-react";
 
 type EventsPreviewHomeProps = {
@@ -86,8 +87,52 @@ export function EventsPreviewHome({ upcoming }: EventsPreviewHomeProps) {
               </article>
             ))
           ) : (
-            <div className="rounded-3xl border border-dashed border-cream-300 bg-white/80 p-8 text-center text-charcoal-700 lg:col-span-3">
-              Upcoming events will appear here automatically once they are added to the church calendar.
+            <div className="lg:col-span-3">
+              <div className="overflow-hidden rounded-3xl border border-cream-200/90 bg-gradient-to-br from-white via-cream-50/60 to-cream-100/80 p-8 text-center shadow-card-soft ring-1 ring-navy-950/[0.035] sm:p-10">
+                <p className="text-[0.65rem] font-semibold tracking-[0.22em] text-gold-700 uppercase">
+                  Always gathering
+                </p>
+                <h3 className="font-heading mt-3 text-2xl text-navy-950 sm:text-3xl">
+                  Join us this week
+                </h3>
+                <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-charcoal-700 sm:text-base">
+                  Special events and ministry gatherings are posted on our full calendar as they
+                  are scheduled. Until then, you are always welcome at our regular worship and
+                  fellowship times.
+                </p>
+                <div className="mx-auto mt-6 flex max-w-lg flex-col gap-3 text-left sm:flex-row sm:gap-4">
+                  <div className="flex-1 rounded-2xl border border-cream-200 bg-white/90 px-4 py-3.5">
+                    <p className="flex items-center gap-2 text-xs font-semibold tracking-wide text-gold-800 uppercase">
+                      <CalendarDays className="size-3.5" aria-hidden />
+                      Sunday worship
+                    </p>
+                    <p className="mt-1.5 text-sm font-medium text-navy-950">
+                      {siteConfig.serviceTime}
+                    </p>
+                  </div>
+                  <div className="flex-1 rounded-2xl border border-cream-200 bg-white/90 px-4 py-3.5">
+                    <p className="flex items-center gap-2 text-xs font-semibold tracking-wide text-gold-800 uppercase">
+                      <Clock3 className="size-3.5" aria-hidden />
+                      Friday programs
+                    </p>
+                    <p className="mt-1.5 text-sm font-medium text-navy-950">
+                      {siteConfig.fridayGathering}
+                    </p>
+                  </div>
+                </div>
+                <p className="mx-auto mt-5 flex max-w-md items-center justify-center gap-2 text-sm text-charcoal-700">
+                  <MapPin className="size-4 shrink-0 text-sage-700" aria-hidden />
+                  {siteConfig.address.full}
+                </p>
+                <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+                  <CTALink href="/events" variant="primary" size="md">
+                    View full calendar
+                  </CTALink>
+                  <CTALink href="/visit" variant="outlineWarm" size="md">
+                    Plan your visit
+                  </CTALink>
+                </div>
+              </div>
             </div>
           )}
         </div>

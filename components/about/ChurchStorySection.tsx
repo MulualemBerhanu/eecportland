@@ -162,9 +162,9 @@ export function ChurchStorySection() {
           <BookOpen className="size-5" strokeWidth={1.5} aria-hidden />
         </div>
         <p className="text-sm leading-relaxed text-cream-50/88 sm:text-[0.9375rem]">
-          <span className="font-semibold text-gold-300">Ebenezer</span> means stone of help —
-          a name that keeps us grateful for God&apos;s faithfulness as we step into whatever
-          chapter He writes next with this church family.
+          <span className="font-semibold text-gold-300">Ebenezer</span>{" "}
+          means the stone of help, a name that keeps us grateful for God&apos;s faithfulness as we
+          step into whatever chapter He writes next with this church family.
         </p>
       </motion.aside>
     </section>
